@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulinha</title>
+</head>
+<body>
+    Insira seu nome: <br>
+    <input type="text" id="ipt_nome"> <br>
+    Insira sua idade: <br>
+    <input type="number" id="ipt_idade" max="40" min="0"> <br>
+    <button onclick="teste()">Mensagem</button> <br>
+    <div id="div_mensagem">Bom dia</div>
+</body>
+</html>
+
+<script>
+    function teste() {
+        var nome = ipt_nome.value
+        var idade = Number(ipt_idade.value)
+        var divisao = idade / 2
+        var multiplicao = idade * 2
+        var subtracao = (idade - 2)
+        var soma = (idade + 2)
+        div_mensagem.innerHTML = `<p1 style="color:red">Soma = ${soma}, <br> Subtração = ${subtracao}, <br> Multiplicação = ${multiplicao} <br>Divisão = ${divisao} <br></p1>`;
+
+        if (idade < 16) {
+            div_mensagem.innerHTML += `Você não pode votar`;
+        } else {
+            div_mensagem.innerHTML += `Você pode votar`;
+        }   
+    }
+</script>
